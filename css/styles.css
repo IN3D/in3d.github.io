@@ -177,6 +177,7 @@ a:focus {
     box-sizing:         border-box;
 
     font-family: 'PT Serif', georgia, serif;
+    text-align: center;
     font-size: 48px;
     line-height: 1.5;
 }
@@ -221,6 +222,7 @@ a:focus {
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    text-align: center;
 
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 30px;
