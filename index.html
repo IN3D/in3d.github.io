@@ -61,8 +61,14 @@
         </div>
 
         <!--finally, this is the top-->
+        <!--contact information, and other sites-->
         <div class="slide step" data-x="1000" data-y="650" data-z="-500" data-rotate-x="90" data-rotate-y="0">
-            <p>Like what you've seen?</p>
+            <!--<p><strong>Like what you've seen?</strong></p>-->
+            <script type="text/javascript">
+                var likeQM = "Like what you've seen?";
+                document.write("<p><strong>"+likeQM.fontsize(10)+"</strong></p>");
+            </script>
+
             <p>I'm on these sites as well</p>
 
             <p>
@@ -93,6 +99,11 @@
             <br/>
             <br/>
             <p>Want to see the source code for this site? <a href="https://github.com/IN3D/in3d.github.io">Have a look.</a></p>
+            <br/><br/>
+            <script type="text/javascript">
+                var text = "This site is made possible with impress.js";
+                document.write("<p>"+text.fontsize(4)+"</p>");
+            </script>
 
         </div>
 
@@ -107,7 +118,7 @@
     <div class="hint">
         <p>use a spacebar or arrow keys to navigate</p>
     </div>
-    <script>
+    <script type="text/javascript">
         if("ontouchstart" in document.documentElement) {
             var hint = document.querySelector(".hint");
 
