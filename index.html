@@ -29,6 +29,7 @@
     <div id="impress">
 
         <!--first side-->
+        <!--this is the front, it's simple just a greeting a picture of myself-->
         <div id="bored" class="slide step" data-x="1000" data-y="1000" data-z="-150" data-rotate-x="0" data-rotate-y="0">
             <p id="name"><strong>Hi! I'm Eric</strong></p>
             <br/>
@@ -72,7 +73,10 @@
     </div>
     <script>
         if("ontouchstart" in document.documentElement) {
-            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>"
+            var hint = document.querySelector(".hint");
+
+            hint.style.fontSize = "25px";
+            hint.innerHTML = "<p>tap left or right</p>";
         }
     </script>
 
