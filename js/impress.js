@@ -183,9 +183,11 @@
                           // Here I've tried to black list IE support all together, I'll have to see how it works out...
                           //I'm going to try removing mobile devices from the black list to see exactly how they handle
                           //impress. it's not perfect, but it seems like the site renders fine in the iOS simulator.
-                           ( ua.search(/(internet explorer)|(microsoft internet explorer)|(android)/) === -1 );
+                           ( ua.search(/('internet explorer')|('microsoft internet explorer')|(ie)|(android)/) === -1 );
+
+    var isIE11 = !!navigator.userAgent.match(/Trident\/7.0; rv 11/);
     
-    if (!impressSupported) {
+    if (!impressSupported || isIE11) {
         // we can't be sure that `classList` is supported
         body.className += " impress-not-supported ";
     } else {
