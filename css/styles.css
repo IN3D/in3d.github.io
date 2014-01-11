@@ -211,7 +211,7 @@ a:focus {
 .slide {
     display: block;
 
-    width: 900px;
+    width: 700px;
     height: 700px;
     padding: 40px 60px;
 
@@ -252,6 +252,12 @@ a:focus {
     First is the title step with a big <h1> (no room for padding) and some
     3D positioning along Z axis.
 */
+
+#name {
+    text-align: center;
+    font-size: 60px;
+}
+
 
 #title {
     padding: 0;
