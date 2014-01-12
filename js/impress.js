@@ -180,10 +180,11 @@
                           // because their CSS 3D support or hardware is not
                           // good enough to run impress.js properly, sorry...
 
-                          // Here I've tried to black list IE support all together, I'll have to see how it works out...
+                          //As a note here, I I've tried to blacklist anything and everything Internet Explorer because of
+                          //how badly it renders the site, IE11 is of exceptionally bad and refuses to fall back.
                           //I'm going to try removing mobile devices from the black list to see exactly how they handle
                           //impress. it's not perfect, but it seems like the site renders fine in the iOS simulator.
-                           ( ua.search(/('internet explorer')|('microsoft internet explorer')|(ie)|(android)/) === -1 );
+                           ( ua.search(/('internet explorer')|('microsoft internet explorer')|(ie)|(ie11)|(android)/) === -1 );
 
     var isIE11 = !!navigator.userAgent.match(/Trident\/7.0; rv 11/);
     
