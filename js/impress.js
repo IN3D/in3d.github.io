@@ -169,7 +169,7 @@
     
     var ua = navigator.userAgent.toLowerCase();
     var impressSupported = 
-                          // browser should support CSS 3D transtorms 
+                          // browser should support CSS 3D transforms
                            ( pfx("perspective") !== null ) &&
                            
                           // and `classList` and `dataset` APIs
@@ -184,13 +184,13 @@
                           //how badly it renders the site, IE11 is of exceptionally bad and refuses to fall back.
                           //I'm going to try removing mobile devices from the black list to see exactly how they handle
                           //impress. it's not perfect, but it seems like the site renders fine in the iOS simulator.
+						  
+						  //as you can see, there are a LOT of things here for catching internet explorer.
+						  //Internet explorer 11 was giving me no end to trouble. Now, the only one that is probably needed to block
+						  //IE is "(trident)" (IE's layout engine). I'm leaving the other stuff here just as a precaution, as this was
+						  //about a day of troubleshooting.
                            ( ua.search(/(trident)|('internet explorer')|('microsoft internet explorer')|(ie)|(ie11)|(android)/) === -1 );
 
-
-    //old attempt to detect IE
-    var isIE11 = !!navigator.userAgent.match(/Trident\/7\./);
-    var IEcatcher = !(window.ActiveXObject) && "ActiveXObject" in window;
-    
     if (!impressSupported) {
         // we can't be sure that `classList` is supported
         body.className += " impress-not-supported ";
