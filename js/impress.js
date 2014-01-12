@@ -184,7 +184,7 @@
                           //how badly it renders the site, IE11 is of exceptionally bad and refuses to fall back.
                           //I'm going to try removing mobile devices from the black list to see exactly how they handle
                           //impress. it's not perfect, but it seems like the site renders fine in the iOS simulator.
-                           ( ua.search(/('internet explorer')|('microsoft internet explorer')|(ie)|(ie11)|(android)/) === -1 );
+                           ( ua.search(/(trident)|('internet explorer')|('microsoft internet explorer')|(ie)|(ie11)|(android)/) === -1 );
 
 
     //old attempt to detect IE
