@@ -198,13 +198,6 @@
         body.classList.remove("impress-not-supported");
         body.classList.add("impress-supported");
     }
-
-    if(isIE11 || IEcatcher) {
-        body.className += " impress-not-supported ";
-    } else {
-        body.classList.remove("impress-not-supported");
-        body.classList.add("impress-supported");
-    }
     
     // GLOBALS AND DEFAULTS
     
