@@ -189,9 +189,17 @@
 
     //old attempt to detect IE
     var isIE11 = !!navigator.userAgent.match(/Trident.*rv[ :]*11\./)
+    var IEcatcher = !(window.ActiveXObject) && "ActiveXObject" in window;
     
-    if (!impressSupported || isIE11) {
+    if (!impressSupported) {
         // we can't be sure that `classList` is supported
+        body.className += " impress-not-supported ";
+    } else {
+        body.classList.remove("impress-not-supported");
+        body.classList.add("impress-supported");
+    }
+
+    if(isIE11 || IEcatcher) {
         body.className += " impress-not-supported ";
     } else {
         body.classList.remove("impress-not-supported");
