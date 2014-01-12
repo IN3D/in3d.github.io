@@ -188,7 +188,7 @@
 
 
     //old attempt to detect IE
-    var isIE11 = !!navigator.userAgent.match(/Trident.*rv[ :]*11\./)
+    var isIE11 = !!navigator.userAgent.match(/Trident\/7\./);
     var IEcatcher = !(window.ActiveXObject) && "ActiveXObject" in window;
     
     if (!impressSupported) {
