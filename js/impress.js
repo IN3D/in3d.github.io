@@ -186,7 +186,9 @@
                           //impress. it's not perfect, but it seems like the site renders fine in the iOS simulator.
                            ( ua.search(/('internet explorer')|('microsoft internet explorer')|(ie)|(ie11)|(android)/) === -1 );
 
-    var isIE11 = !!navigator.userAgent.match(/Trident\/7.0; rv 11/);
+
+    //old attempt to detect IE
+    var isIE11 = !!navigator.userAgent.match(/Trident.*rv[ :]*11\./)
     
     if (!impressSupported || isIE11) {
         // we can't be sure that `classList` is supported
