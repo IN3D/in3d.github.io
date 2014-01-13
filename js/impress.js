@@ -198,7 +198,7 @@
         body.classList.remove("impress-not-supported");
         body.classList.add("impress-supported");
     }
-    
+
     // GLOBALS AND DEFAULTS
     
     // This is were the root elements of all impress.js instances will be kept.
