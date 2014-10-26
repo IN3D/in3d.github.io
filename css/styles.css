@@ -69,6 +69,10 @@ q:before, q:after {
     content: none;
 }
 
+li {
+  list-style-type: circle;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
